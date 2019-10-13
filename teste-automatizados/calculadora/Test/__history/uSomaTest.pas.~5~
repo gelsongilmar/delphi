@@ -1,0 +1,18 @@
+unit uSomaTest;
+
+interface
+
+uses
+   TestFrameWork
+  ,uSoma;
+
+type
+
+  TSomaTest = class(TTestCase)
+    procedure verificarSomaDoisNumerosPositivos();
+    procedure verificarSomaNumeroPositivoENumeroNegativo();
+  end;
+
+implementation
+
+end.

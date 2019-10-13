@@ -1,0 +1,16 @@
+unit uExceptions;
+
+interface
+
+uses
+  Winapi.Windows;
+
+type
+
+  TExceptionDivisaoPorZero = class(Exception)
+
+  end;
+
+implementation
+
+end.

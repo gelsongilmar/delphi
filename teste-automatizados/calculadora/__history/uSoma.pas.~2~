@@ -1,0 +1,13 @@
+unit uSoma;
+
+interface
+
+type
+
+  TSoma = class
+
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,13 @@
+unit uSoma;
+
+interface
+
+type
+
+  TSoma = class
+    function executar(valor1, valor2: Double): Double;
+  end;
+
+implementation
+
+end.

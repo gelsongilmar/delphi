@@ -1,0 +1,16 @@
+unit uSomaTest;
+
+interface
+
+uses
+  TestFrameWork;
+
+type
+
+  TSomaTest = class(TTestCase)
+
+  end;
+
+implementation
+
+end.
