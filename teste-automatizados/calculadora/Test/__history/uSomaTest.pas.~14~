@@ -21,11 +21,11 @@ procedure TSomaTest.verificarSomaDoisNumerosPositivos;
 var
   operacao: TSoma;
 begin
-  operacao := TSoma.Create(); // Setup
+  operacao := TSoma.Create();
   try
-    Assert(operacao.executar(3, 4) = 7); // Assert
+    Assert(operacao.executar(3, 4) = 7);
   finally
-    operacao.Free(); // Cleanup
+    operacao.Free();
   end;
 end;
 
