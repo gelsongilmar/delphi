@@ -1,0 +1,21 @@
+unit uFizzBuzzCore;
+
+interface
+
+type
+
+  IFizzBuzzCore = interface
+    function getSaida(numero, divisor: Integer; saidaAtual, saidaNova: string) : string;
+  end;
+
+  TFizzBuzzCore = class(TInterfacedObject, IFizzBuzzCore)
+  private
+    function getSaida(numero, divisor: Integer; saidaAtual, saidaNova: string) : string;
+  public
+    class function new(): IFizzBuzzCore;
+  end;
+
+
+implementation
+
+end.

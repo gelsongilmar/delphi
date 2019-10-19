@@ -19,50 +19,84 @@ implementation
 uses
   System.SysUtils, uExceptions;
 
-{ TSomaTest }
-
 procedure TDivisaoTest.verificarDivisaoDoisNumerosPositivos;
 var
   operacao: TDivisao;
+  saidaEsperada: Double;
+  saidaResultante: Double;
 begin
+
+  // Cenário
   operacao := TDivisao.Create();
+  saidaEsperada := 3;
+  saidaResultante := 0;
+
+  //Ação
   try
-    Assert(operacao.executar(12, 4) = 3);
+    saidaResultante := operacao.executar(12, 4);
   finally
     operacao.Free();
   end;
+
+  //Validação
+  Assert(saidaEsperada = saidaResultante, 'Esperava "' + FloatToStr(saidaEsperada) + '" mas obteve "' + FloatToStr(saidaResultante) + '"');
+
 end;
 
 procedure TDivisaoTest.verificarDivisaoNumeroPositivoENumeroNegativo;
 var
   operacao: TDivisao;
+  saidaEsperada: Double;
+  saidaResultante: Double;
 begin
+
+  // Cenário
   operacao := TDivisao.Create();
+  saidaEsperada := -4;
+  saidaResultante := 0;
+
+  //Ação
   try
-    Assert(operacao.executar(12, -3) = -4);
+    saidaResultante := operacao.executar(12, -3);
   finally
     operacao.Free();
   end;
+
+  //Validação
+  Assert(saidaEsperada = saidaResultante, 'Esperava "' + FloatToStr(saidaEsperada) + '" mas obteve "' + FloatToStr(saidaResultante) + '"');
+
 end;
 
 procedure TDivisaoTest.verificarDivisaoNumeroPositivoEZero;
 var
   operacao: TDivisao;
+  saidaEsperada: String;
+  saidaResultante: String;
   resultado: Double;
 begin
+
+  // Cenário
   operacao := TDivisao.Create();
+  saidaEsperada := TExceptionDivisaoPorZero.ClassName;
+  saidaResultante := '';
+
+  //Ação
   try
     try
       resultado := operacao.executar(4, 0);
     except
       on E: Exception do
       begin
-        Assert(E.inheritsFrom(TExceptionDivisaoPorZero));
+        saidaResultante := e.ClassName;
       end;
     end;
   finally
     operacao.Free();
   end;
+
+  //Validação
+  Assert(saidaEsperada = saidaResultante, 'Esperava "' + saidaEsperada + '" mas obteve "' + saidaResultante + '"');
+
 end;
 
 initialization
