@@ -1,0 +1,108 @@
+unit uFizzBuzzTest;
+
+interface
+
+uses
+   TestFrameWork
+  ,uFizzBuzz;
+
+type
+
+  TFizzBuzzTest = class(TTestCase)
+    procedure verificarNumeroComum();
+    procedure verificarFizz();
+    procedure verificarBuzz();
+  private
+    procedure verificarFizzBuzz;
+  end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+procedure TFizzBuzzTest.verificarNumeroComum();
+var
+  classe: IFizzBuzz;
+  saidaEsperada: string;
+  saidaResultante: string;
+begin
+
+  // Cenário
+  classe := TFizzBuzz.new();
+  saidaEsperada := '7';
+  saidaResultante := '';
+
+  //Ação
+  saidaResultante := classe.escreverSaida(7);
+
+  //Validação
+  Assert(saidaEsperada = saidaResultante, 'Esperava "' + saidaEsperada + '" mas obteve "' + saidaResultante + '"');
+
+end;
+
+procedure TFizzBuzzTest.verificarFizz();
+var
+  classe: IFizzBuzz;
+  saidaEsperada: string;
+  saidaResultante: string;
+begin
+
+  // Cenário
+  classe := TFizzBuzz.new();
+  saidaEsperada := 'Fizz';
+  saidaResultante := '';
+
+  //Ação
+  saidaResultante := classe.escreverSaida(6);
+
+  //Validação
+  Assert(saidaEsperada = saidaResultante, 'Esperava "' + saidaEsperada + '" mas obteve "' + saidaResultante + '"');
+
+end;
+
+procedure TFizzBuzzTest.verificarBuzz();
+var
+  classe: IFizzBuzz;
+  saidaEsperada: string;
+  saidaResultante: string;
+begin
+
+  // Cenário
+  classe := TFizzBuzz.new();
+  saidaEsperada := 'Buzz';
+  saidaResultante := '';
+
+  //Ação
+  saidaResultante := classe.escreverSaida(10);
+
+  //Validação
+  Assert(saidaEsperada = saidaResultante, 'Esperava "' + saidaEsperada + '" mas obteve "' + saidaResultante + '"');
+
+end;
+
+procedure TFizzBuzzTest.verificarFizzBuzz();
+var
+  classe: IFizzBuzz;
+  saidaEsperada: string;
+  saidaResultante: string;
+begin
+
+  // Cenário
+  classe := TFizzBuzz.new();
+  saidaEsperada := 'FizzBuzz';
+  saidaResultante := '';
+
+  //Ação
+  saidaResultante := classe.escreverSaida(30);
+
+  //Validação
+  Assert(saidaEsperada = saidaResultante, 'Esperava "' + saidaEsperada + '" mas obteve "' + saidaResultante + '"');
+
+end;
+
+initialization
+  TestFrameWork.RegisterTest(TFizzBuzzTest.Suite);
+
+end.
+

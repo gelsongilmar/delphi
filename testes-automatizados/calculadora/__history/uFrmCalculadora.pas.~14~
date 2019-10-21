@@ -1,0 +1,47 @@
+unit uFrmCalculadora;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TFrmCalculadora = class(TForm)
+    edtValor1: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    edtValor2: TEdit;
+    btnSoma: TButton;
+    btnSubtracao: TButton;
+    btnMultiplicacao: TButton;
+    btnDivisao: TButton;
+    edtResultado: TEdit;
+    Label3: TLabel;
+    procedure btnSomaClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCalculadora: TFrmCalculadora;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmCalculadora.btnSomaClick(Sender: TObject);
+var
+  operacao: TSoma;
+begin
+  operacao := TSoma.Create();
+  try
+    edtResultado.Text := FloatToStr(operacao.executal(edtValor1.Text, edtValor2.Text));
+  finally
+    operacao.Free();
+  end;
+end;
+
+end.

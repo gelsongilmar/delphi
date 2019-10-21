@@ -1,0 +1,21 @@
+unit uDivisao;
+
+interface
+
+type
+
+  TDivisao = class
+    function executar(valor1, valor2: Double): Double;
+  end;
+
+implementation
+
+{ TSoma }
+
+function TDivisao.executar(valor1, valor2: Double): Double;
+begin
+  Result := valor1 / valor2;
+end;
+
+end.
+

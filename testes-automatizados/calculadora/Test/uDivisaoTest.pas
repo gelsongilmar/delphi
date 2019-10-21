@@ -1,0 +1,106 @@
+unit uDivisaoTest;
+
+interface
+
+uses
+   TestFrameWork
+  ,uDivisao;
+
+type
+
+  TDivisaoTest = class(TTestCase)
+    procedure verificarDivisaoDoisNumerosPositivos();
+    procedure verificarDivisaoNumeroPositivoENumeroNegativo();
+    procedure verificarDivisaoNumeroPositivoEZero();
+  end;
+
+implementation
+
+uses
+  System.SysUtils, uExceptions;
+
+procedure TDivisaoTest.verificarDivisaoDoisNumerosPositivos;
+var
+  operacao: TDivisao;
+  saidaEsperada: Double;
+  saidaResultante: Double;
+begin
+
+  // Cenário
+  operacao := TDivisao.Create();
+  saidaEsperada := 3;
+  saidaResultante := 0;
+
+  //Ação
+  try
+    saidaResultante := operacao.executar(12, 4);
+  finally
+    operacao.Free();
+  end;
+
+  //Validação
+  Assert(saidaEsperada = saidaResultante, 'Esperava "' + FloatToStr(saidaEsperada) + '" mas obteve "' + FloatToStr(saidaResultante) + '"');
+
+end;
+
+procedure TDivisaoTest.verificarDivisaoNumeroPositivoENumeroNegativo;
+var
+  operacao: TDivisao;
+  saidaEsperada: Double;
+  saidaResultante: Double;
+begin
+
+  // Cenário
+  operacao := TDivisao.Create();
+  saidaEsperada := -4;
+  saidaResultante := 0;
+
+  //Ação
+  try
+    saidaResultante := operacao.executar(12, -3);
+  finally
+    operacao.Free();
+  end;
+
+  //Validação
+  Assert(saidaEsperada = saidaResultante, 'Esperava "' + FloatToStr(saidaEsperada) + '" mas obteve "' + FloatToStr(saidaResultante) + '"');
+
+end;
+
+procedure TDivisaoTest.verificarDivisaoNumeroPositivoEZero;
+var
+  operacao: TDivisao;
+  saidaEsperada: String;
+  saidaResultante: String;
+  resultado: Double;
+begin
+
+  // Cenário
+  operacao := TDivisao.Create();
+  saidaEsperada := TExceptionDivisaoPorZero.ClassName;
+  saidaResultante := '';
+
+  //Ação
+  try
+    try
+      resultado := operacao.executar(4, 0);
+    except
+      on E: Exception do
+      begin
+        saidaResultante := e.ClassName;
+      end;
+    end;
+  finally
+    operacao.Free();
+  end;
+
+  //Validação
+  Assert(saidaEsperada = saidaResultante, 'Esperava "' + saidaEsperada + '" mas obteve "' + saidaResultante + '"');
+
+end;
+
+initialization
+  TestFrameWork.RegisterTest(TDivisaoTest.Suite);
+
+end.
+

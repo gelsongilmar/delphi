@@ -1,0 +1,13 @@
+unit uExceptions;
+
+interface
+
+type
+
+  TExceptionDivisaoPorZero = class
+
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,49 @@
+program FizzBuzz;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+function getSaida(numero, divisor: Integer; saidaAtual, saidaNova: string) : string;
+begin
+  Result := saidaAtual;
+  if numero mod divisor = 0 then
+    Result := saidaNova;
+end;
+
+function getFizz(aluno: Integer; saida: string): string;
+begin
+  Result := getSaida(aluno, 3, saida, 'Fizz');
+end;
+
+function getBuzz(aluno: Integer; saida: string): string;
+begin
+  Result := getSaida(aluno, 5, saida, 'Buzz');
+end;
+
+function getFizzBuzz(aluno: Integer; saida: string): string;
+begin
+  Result := getSaida(aluno, 15, saida, 'FizzBuzz');
+end;
+
+function escreverSaida(aluno: Integer): string;
+begin
+  Result := IntToStr(aluno);
+  Result := getFizz(aluno, Result);
+  Result := getBuzz(aluno, Result);
+  Result := getFizzBuzz(aluno, Result);
+end;
+
+var
+  aluno: Integer;
+  escrever: string;
+
+begin
+  for aluno := 1 to 100 do
+    Writeln(escreverSaida(aluno));
+
+  Readln(aluno);
+end.

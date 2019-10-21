@@ -1,0 +1,48 @@
+unit uSubtracaoTest;
+
+interface
+
+uses
+   TestFrameWork
+  ,uSubtracao;
+
+type
+
+  TSubtracaoTest = class(TTestCase)
+    procedure verificarSomaDoisNumerosPositivos();
+    procedure verificarSomaNumeroPositivoENumeroNegativo();
+  end;
+
+implementation
+
+{ TSomaTest }
+
+procedure TSubtracaoTest.verificarSomaDoisNumerosPositivos;
+var
+  operacao: TSoma;
+begin
+  operacao := TSoma.Create();
+  try
+    Assert(operacao.executar(3, 4) = 7);
+  finally
+    operacao.Free();
+  end;
+end;
+
+procedure TSubtracaoTest.verificarSomaNumeroPositivoENumeroNegativo;
+var
+  operacao: TSoma;
+begin
+  operacao := TSoma.Create();
+  try
+    Assert(operacao.executar(3, -4) = -1);
+  finally
+    operacao.Free();
+  end;
+end;
+
+initialization
+  TestFrameWork.RegisterTest('Validação da Classe TSoma', TSubtracaoTest.Suite);
+
+end.
+
