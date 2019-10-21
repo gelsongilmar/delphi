@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2019/10/18 23:35:37.963,=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\uFizzBuzzCore.pas</Transaction>
-    <Transaction>2019/10/18 23:39:22.710,=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Test\uFizzBuzzCoreTest.pas</Transaction>
-    <Transaction>2019/10/18 23:48:49.987,=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Test\Unit1.pas</Transaction>
-    <Transaction>2019/10/18 23:49:04.435,C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Test\uFizzBuzzTest.pas=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Test\Unit1.pas</Transaction>
-    <Transaction>2019/10/18 23:49:42.884,=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\uFizzBuzz.pas</Transaction>
+	<Transactions>
+    <Transaction>2019/10/18 23:35:37.000.963,=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\uFizzBuzzCore.pas</Transaction>
+    <Transaction>2019/10/18 23:39:22.000.710,=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Test\uFizzBuzzCoreTest.pas</Transaction>
+    <Transaction>2019/10/18 23:48:49.000.987,=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Test\Unit1.pas</Transaction>
+    <Transaction>2019/10/18 23:49:04.000.435,C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Test\Unit1.pas=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Test\uFizzBuzzTest.pas</Transaction>
+    <Transaction>2019/10/18 23:49:42.000.884,=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\uFizzBuzz.pas</Transaction>
   </Transactions>
 </BorlandProject>

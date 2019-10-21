@@ -1,10 +1,2 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-  <Transactions>
-    <Transaction>2019/10/18 22:51:05.876,C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\FizzBuzz.dproj=C:\git\Project1.dproj</Transaction>
-    <Transaction>2019/10/18 23:17:36.129,=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Unit1.pas</Transaction>
-    <Transaction>2019/10/18 23:18:33.461,C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\uFizzBuzzCore.pas=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Unit1.pas</Transaction>
-    <Transaction>2019/10/18 23:20:46.719,=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Unit1.pas</Transaction>
-    <Transaction>2019/10/18 23:20:53.869,C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\uFizzBuzz.pas=C:\git\gelsongilmar\delphi\teste-automatizados\FizzBuzz\Unit1.pas</Transaction>
-  </Transactions>
-</BorlandProject>
+<BorlandProject/>

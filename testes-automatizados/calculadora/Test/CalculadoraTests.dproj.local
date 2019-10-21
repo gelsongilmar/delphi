@@ -1,15 +1,2 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-	<Transactions>
-    <Transaction>2019/10/13 10:42:42.000.515,=C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\uSoma.pas</Transaction>
-    <Transaction>2019/10/13 10:51:28.000.928,=C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\Test\uSubtracaoTest.pas</Transaction>
-    <Transaction>2019/10/13 10:51:29.000.322,=C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\uSubtracao.pas</Transaction>
-    <Transaction>2019/10/13 11:01:20.000.985,=C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\Test\Unit1.pas</Transaction>
-    <Transaction>2019/10/13 11:01:33.000.220,C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\Test\Unit1.pas=C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\Test\uMultiplicacaoTest.pas</Transaction>
-    <Transaction>2019/10/13 11:01:44.000.485,=C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\uMultiplicacao.pas</Transaction>
-    <Transaction>2019/10/13 11:02:58.000.784,=C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\Test\Unit1.pas</Transaction>
-    <Transaction>2019/10/13 11:03:11.000.844,C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\Test\Unit1.pas=C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\Test\uDivisaoTest.pas</Transaction>
-    <Transaction>2019/10/13 11:03:43.000.713,=C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\uDivisao.pas</Transaction>
-    <Transaction>2019/10/13 11:06:54.000.548,=C:\git\gelsongilmar\delphi\teste-automatizados\calculadora\uExceptions.pas</Transaction>
-  </Transactions>
-</BorlandProject>
+<BorlandProject/>
